@@ -1,4 +1,6 @@
 ja:
+  date:
+    order: []
   activerecord:
     attributes:
       user:

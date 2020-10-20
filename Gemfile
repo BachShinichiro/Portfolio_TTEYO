@@ -14,6 +14,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'rename'
 gem 'devise'
 gem 'devise-i18n'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'rmagick'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false

@@ -14,7 +14,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params)
+    @event = current_user.events.build(event_params)
     if @event.save
       redirect_to events_path,notice: "イベントを作成しました"
     else
@@ -40,7 +40,7 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:event_name, :period, :ticket_type, :number_of_ticket, :total_price, :cast_name, :remarks)
+    params.require(:event).permit(:event_name, :period, :ticket_type, :number_of_ticket, :total_price, :cast_name, :status, :remarks,:flyer, :flyer_cache)
   end
 
   def set_event

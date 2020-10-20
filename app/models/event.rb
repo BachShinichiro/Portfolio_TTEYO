@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
-  def index
-  end
+  belongs_to :user
+  mount_uploader :flyer, ImageUploader
 end
