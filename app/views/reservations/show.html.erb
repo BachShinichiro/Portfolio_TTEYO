@@ -2,11 +2,11 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @reservation.reservation_name %>
-  <% if @reservation.flyer.url != nil %>
-  <%= image_tag @reservation.flyer.url %>
+  <%= @reservation.event.event_name %>
+  <% if @reservation.event.flyer != nil %>
+  <%= image_tag @reservation.event.flyer.url %>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
-<%= link_to 'Back', reservations_path %>
+<%= link_to 'Edit', edit_event_reservation_path(@reservation) %> |
+<%= link_to 'Back', event_reservations_path %>

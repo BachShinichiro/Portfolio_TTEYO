@@ -1,4 +1,4 @@
-<h1>予約が完了しました！</h1>
-<h4>name: <%= @reservation.name %></h4>
+<h1>予約完了のお知らせ</h1>
+<h4>name: <%= @reservation.user.email %></h4>
 <h4>予約内容の確認</h4>
-<p>content: <%= @reservation.content %></p>
+<p>content: <%= @reservation.event.event_name %></p>

@@ -1,5 +1,5 @@
 class ReservationsController < ApplicationController
-  before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+  before_action :set_reservation, only: [:new, :create, :update, :destroy]
   def index
     @reservations = Reservation.all
   end
@@ -8,17 +8,16 @@ class ReservationsController < ApplicationController
     @reservation = current_user.reservations.build
   end
 
-  def show
-  end
+  def show;end
 
-  def edit
-  end
+  def edit;end
 
   def create
     @reservation = current_user.reservations.build(reservation_params)
+    @reservation.event = @event
     if @reservation.save
       ReservationMailer.reservation_mail(@reservation).deliver  ##追記
-      redirect_to reservations_path, notice: 'Reservation was successfully created.'
+      redirect_to event_reservation_path(@event, @reservation), notice: 'Reservation was successfully created.'
     else
       render :new
     end
@@ -39,7 +38,10 @@ class ReservationsController < ApplicationController
 
   private
   def set_reservation
-    @reservation = Reservation.find(params[:id,])
+    @reservation = Reservation.find(params[:id])
+  end
+  def set_event
+    @event = Event.find(params[:event_id])
   end
   def reservation_params
     params.require(:reservation).permit(:date, :ticket_type, :number_of_ticket, :total_price, :remarks, :cast_name)

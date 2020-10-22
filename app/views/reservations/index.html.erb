@@ -18,9 +18,9 @@
         <td><%= r.total_price%></td>
         <td><%= r.remarks%></td>
         <td><%= r.cast_name%></td>
-        <td><%= link_to 'Show', reservation %></td>
-        <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
-        <td><%= link_to 'Destroy', reservation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', event_reservation_path(event_id: r.event_id, id: r.id) %></td>
+        <td><%= link_to 'Edit', edit_event_reservation_path(event_id: r.event_id, id: r.id) %></td>
+        <td><%= link_to 'Destroy', event_reservation_path(event_id: r.event_id, id: r.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Reservation', new_reservation_path %>
+<%= link_to 'New Reservation', new_event_reservation_path %>
