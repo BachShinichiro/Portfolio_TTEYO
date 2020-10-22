@@ -32,6 +32,7 @@ class EventsController < ApplicationController
       render :new
     end
   end
+  
   def destroy
     @event.destroy
     redirect_to events_path, notice: 'イベントを削除しました'

@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
   belongs_to :user
-  has_many :reservation
+  has_many :reservations
   mount_uploader :flyer, ImageUploader
 end

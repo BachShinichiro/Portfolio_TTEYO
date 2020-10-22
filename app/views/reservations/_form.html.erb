@@ -1,0 +1,25 @@
+<%= form_with(model: @reservation, local: true) do |form| %>
+  <div class="field">
+    <strong>Name:</strong>
+
+    <li><%= form.label :date %></li>
+    <li><%= form.datetime_field	 :date %></li>
+    <li><%= form.label :ticket_type %></li>
+    <li><%= form.select :ticket_type , ["一般席", "招待席", "立ち見席"], include_blank: "選択して下さい"%></li>
+    <li><%= form.label :number_of_tiket %></li>
+    <li><%= form.number_field :number_of_tiket %></li>
+    <li><%= form.label :total_price %></li>
+    <li><%= form.label '計算する機能' %></li>
+    <li><%= form.label :cast_name %></li>
+    <li><%= form.select :cast_name , ["サミュエル・L・ジャクソン", "デンゼル・ワシントン
+", "ミラ･ジョヴォヴィッチ"], include_blank: "選択して下さい" %></li>
+    <li><%= form.label :remarks %></li>
+    <li><%= form.text_area :remarks %></li>
+
+  </div>
+
+  <div class="actions">
+  
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @reservation.reservation_name %>
+  <% if @reservation.flyer.url != nil %>
+  <%= image_tag @reservation.flyer.url %>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>
