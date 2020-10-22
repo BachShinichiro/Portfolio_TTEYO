@@ -1,6 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Events</h1>
+<%= search_form_for @q do |f| %>
+  <%= f.label :event_name, "Keyword" %>
+  <%= f.search_field :event_name_cont %>
+
+  <%= f.submit "検索" %>
+<% end %>
+
 <table>
   <thead>
     <tr>
