@@ -8,6 +8,8 @@ class EventsController < ApplicationController
   end
 
   def show
+    @comments = @event.comments
+    @comment = @event.comments.build
   end
 
   def new
