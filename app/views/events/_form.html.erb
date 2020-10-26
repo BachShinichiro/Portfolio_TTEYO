@@ -1,27 +1,31 @@
-<%= form_with(model: event, local: true) do |form| %>
-  <div class="field">
-    <li><%= form.label :flyer %></li>
-    <li><%= form.file_field :flyer %></li>
-    <li><%= form.label :event_name %></li>
-    <li><%= form.text_field :event_name %></li>
-    <li><%= form.label :period %></li>
-    <li><%= form.datetime_field :period %></li>~
-    <li><%= form.datetime_field :period %></li>
-    <li><%= form.label :tikcket_type %></li>
-    <li><%= form.text_field :tikcket_type %></li>
-    <li><%= form.label :number_of_tiket %></li>
-    <li><%= form.number_field :number_of_tiket %></li>
-    <li><%= form.label :total_price %></li>
-    <li><%= form.label '4000円' %></li>
-    <li><%= form.label :cast_name %></li>
-    <li><%= form.text_field :cast_name %></li>
-    <li><%= form.label :remarks %></li>
-    <li><%= form.text_area :remarks %></li>
+<div class="login">
+  <div class="heading">
+    <%= form_with(model: event, local: true) do |form| %>
+      <div class="field">
+        <li><%= form.label :flyer %></li>
+        <li><%= form.file_field :flyer %></li>
+        <li><%= form.label :event_name %></li>
+        <li><%= form.text_field :event_name %></li>
+        <li><%= form.label :period %></li>
+        <li><%= form.datetime_field :period %></li>~
+        <li><%= form.datetime_field :period %></li>
+        <li><%= form.label :tikcket_type %></li>
+        <li><%= form.text_field :tikcket_type %></li>
+        <li><%= form.label :number_of_tiket %></li>
+        <li><%= form.number_field :number_of_tiket %></li>
+        <li><%= form.label :total_price %></li>
+        <li><%= form.label '4000円' %></li>
+        <li><%= form.label :cast_name %></li>
+        <li><%= form.text_field :cast_name %></li>
+        <li><%= form.label :remarks %></li>
+        <li><%= form.text_area :remarks %></li>
 
-  </div>
+      </div>
 
-  <div class="actions">
-  
-    <%= form.submit %>
-  </div>
-<% end %>
+      <div class="actions">
+      
+        <%= form.submit %>
+      </div>
+    <% end %>
+  </div> 
+</div>

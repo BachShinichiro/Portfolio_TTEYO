@@ -7,40 +7,42 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&  display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500&display=swap" rel="stylesheet">
   </head>
+
   <body>
     <header>
-      <nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <div class="navbar-header">
-          	<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarEexample">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" <%= link_to 'TTEYO', root_path %></a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbarEexample">
-            <ul class="nav navbar-nav">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand font-weight:bold" <%= link_to 'ってよ', root_path  %></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav ml-auto font-weight: bold">
+            <div class>
               <% if user_signed_in? %>
-                 <li><%= link_to "イベント投稿", events_path %></li>
-                 <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+                <li class="nav-item active"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete ,class:"nav-link" %></li>
               <% else %>
-                <li> <%= link_to "新規登録", new_user_registration_path %></li>
-                <li><%= link_to "ログイン", new_user_session_path %></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="nav-item active"><%= link_to "TOP", root_path ,class:"nav-link" %></li>
+                <li class="nav-item active"><%= link_to "SIGN UP", new_user_registration_path ,class:"nav-link" %></li>
+                <li class="nav-item active"><%= link_to "LOG IN", new_user_session_path ,class:"nav-link" %></li>
+              </ul>
               <% end %>
-              <li><a href="">top</a></li>
-              <li><a href="">menu1</a></li>
-              <li><a href="">menu2</a></li>
-            </ul>
-          </div>
+            </div>
+          </ul>
         </div>
       </nav>
     </header>
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
+    <div class="masthead">
+      <div class=logo><a href=""><img src="./../../../public/top.png" width="500" height="220"></div>
+    </div>
     <%= yield %>
     <footer>
       <p>© 2020 TTEYO</p>

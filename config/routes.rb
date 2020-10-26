@@ -4,7 +4,7 @@ Rails.application.routes.draw do
     resources :reservations
     resources :comments
   end
-  root 'events#index'
+  root 'tops#index'
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end

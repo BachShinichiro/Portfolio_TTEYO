@@ -1,0 +1,86 @@
+// Place all the styles related to the tops controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrapper{
+  padding-top: 50px;
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  padding-bottom: 120px;/*←footerの高さ*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  background-image:url("/images/bg10.JPG");
+}
+
+footer {
+  width: 100%;
+  background-color:#e8e9eb;
+  padding: 20px 0 10px 0;
+  color: #c8c9cc;
+  margin: auto;
+  padding-bottom: 10px;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+}
+
+footer p {
+  text-align: center;
+}
+
+body {
+  background-image:url("/images/bg3.JPG");
+}
+
+.heading {
+  background-image:url("/images/bg10.JPG");
+}
+header {
+  background-image: url("/images/bg3.JPG");
+}
+
+header a {
+  font-weight: bold;
+  
+}
+
+header a:hover {
+  background-color: #DDDDDD	;
+  
+}
+
+footer {
+  background-image: url("/images/bg3.JPG");
+}
+
+body {
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+h3 {
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  margin-bottom: 240px;
+  font-size: 50px;
+  margin-bottom: auto;
+  color: #FFFAFA	;
+}
+
+div .btn h3 {
+  text-align: center;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+}
+
+a {
+  color: azure;
+}
+
+.masthead {
+  background-image:url('/assets/images/bg9.JPG')
+}

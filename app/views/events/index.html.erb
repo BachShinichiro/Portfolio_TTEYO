@@ -1,33 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Events</h1>
-<%= search_form_for @q do |f| %>
-  <%= f.label :event_name, "Keyword" %>
-  <%= f.search_field :event_name_cont %>
-
-  <%= f.submit "検索" %>
-<% end %>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @events.each do |event| %>
-      <tr>
-        <td><%= event.event_name%></td>
-        <td><%= link_to 'Show', event %></td>
-        <td><%= link_to 'Edit', edit_event_path(event) %></td>
-        <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+<div class="login">
+  <div class="heading">    
+    <br>
+    <%= search_form_for @q do |f| %>
+      <%= f.label :event_name, "劇団名で検索" %>
+      <%= f.search_field :event_name_cont %>
+      <%= f.submit "検索" %>
     <% end %>
-  </tbody>
-</table>
 
-<br>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
 
-<%= link_to 'New Event', new_event_path %>
+      <tbody>
+        <% @events.each do |event| %>
+          <tr>
+            <td><%= event.event_name%></td>
+            <td><%= link_to 'Show', event %></td>
+            <td><%= link_to 'Edit', edit_event_path(event) %></td>
+            <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Event', new_event_path %>
+  </div> 
+</div>
