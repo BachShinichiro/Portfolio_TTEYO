@@ -2,7 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .wrapper{
-  padding-top: 50px;
   min-height: 100vh;
   position: relative;/*←相対位置*/
   padding-bottom: 120px;/*←footerの高さ*/
@@ -20,6 +19,7 @@ footer {
   font-size: 12px;
   position: absolute;
   bottom: 0;
+  flex: 1;
 }
 
 footer p {
@@ -27,11 +27,17 @@ footer p {
 }
 
 body {
-  background-image:url("/images/bg3.JPG");
+  background-image:url("/images/bg6.JPG");
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
 }
 
 .heading {
-  background-image:url("/images/bg10.JPG");
+  width: 100%;
+  background-image:url("/images/bg9.JPG");
+  padding-bottom: 5em;
+
 }
 header {
   background-image: url("/images/bg3.JPG");
@@ -51,9 +57,6 @@ footer {
   background-image: url("/images/bg3.JPG");
 }
 
-body {
-}
-
 h1 {
   text-align: center;
   font-size: 50px;
@@ -68,6 +71,11 @@ h3 {
   color: #FFFAFA	;
 }
 
+h5 {
+  text-align: center;
+  padding: 7em;
+  font-family: 'Noto Serif JP', serif;
+}
 div .btn h3 {
   text-align: center;
 }
@@ -75,6 +83,7 @@ div .btn h3 {
 .logo {
   text-align: center;
   width: 100%;
+  position: relative;
 }
 
 a {
@@ -82,5 +91,9 @@ a {
 }
 
 .masthead {
-  background-image:url('/assets/images/bg9.JPG')
+  text-align: center;
+}
+
+.masthead a {
+  
 }

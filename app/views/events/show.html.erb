@@ -1,18 +1,22 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.event_name %>
-  <% if @event.flyer.url != nil %>
-  <%= image_tag @event.flyer.url %>
-  <% end %>
-</p>
-<%= link_to 'Reservation', new_event_reservation_path(@event, @reservation) %>|
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
-<p>質問一覧</p>
- <div id="comments_area">
-    <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
-    <%= render partial: 'comments/index', locals: { comments: @comments, event: @event } %>
+<p id="notice"><%= notice %></p>
+<div class="login">
+  <div class="heading">
+    <p>
+      <strong>Name:</strong>
+      <%= @event.event_name %>
+      <% if @event.flyer.url != nil %>
+      <%= image_tag @event.flyer.url %>
+      <% end %>
+    </p>
+    <%= link_to 'Reservation', new_event_reservation_path(@event, @reservation) %>|
+    <%= link_to 'Edit', edit_event_path(@event) %> |
+    <%= link_to 'Back', events_path %>
+    <p>質問一覧</p>
+    <div id="comments_area">
+        <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
+        <%= render partial: 'comments/index', locals: { comments: @comments, event: @event } %>
+    </div>
+    <%= render partial: 'comments/form', locals: { comment: @comment, event: @event } %>
+  </div>
 </div>
-<%= render partial: 'comments/form', locals: { comment: @comment, event: @event } %>
