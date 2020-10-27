@@ -45,7 +45,6 @@ header {
 
 header a {
   font-weight: bold;
-  
 }
 
 header a:hover {
@@ -71,6 +70,10 @@ h3 {
   color: #FFFAFA	;
 }
 
+h3:hover {
+  background-color: #c8c9cc;
+}
+
 h5 {
   text-align: center;
   padding: 7em;
@@ -86,7 +89,7 @@ div .btn h3 {
   position: relative;
 }
 
-a {
+h3 a {
   color: azure;
 }
 
