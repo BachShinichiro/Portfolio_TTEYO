@@ -1,6 +1,8 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :check_user, only: [:edit, :update, :destroy]
+
 
   def index
     @q = Event.ransack(params[:q])
@@ -50,4 +52,12 @@ class EventsController < ApplicationController
   def set_event
     @event = Event.find(params[:id])
   end
+
+  def check_user
+    if current_user != @user
+      flash[:notice] = '他のユーザーの投稿は修正できません'
+      redirect_to pictures_path 
+    end
+  end
+
 end
