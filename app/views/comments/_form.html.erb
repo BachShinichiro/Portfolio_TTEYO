@@ -10,8 +10,9 @@
     </div>
   <% end %>
   <div class="field">
+    <i class="far fa-comment-dots"></i>
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content, class:"form-control", placeholder: "テキストを入力"%>
   </div>
   <div class="actions">
     <%= form.submit %>
