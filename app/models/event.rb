@@ -8,5 +8,4 @@ class Event < ApplicationRecord
   enum tikcket_type: { 一般席: 0, 特別席: 1, 招待: 2 }
 
   validates :event_name,  presence: true, length: { maximum: 30 }
-  validates :content,  presence: true, length: { maximum: 144 }
 end
