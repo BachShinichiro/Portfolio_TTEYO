@@ -1,9 +1,11 @@
     <br>
-    <%= search_form_for @q do |f| %>
-      <%= f.label :event_name, "劇団名で検索" %>
-      <%= f.search_field :event_name_cont %>
-      <%= f.submit "検索" %>
-    <% end %>
+    <div class="search">
+      <%= search_form_for @q do |f| %>
+        <%= f.label :event_name, "公演名で検索" %>
+        <%= f.search_field :event_name_cont %>
+        <%= f.submit "検索" %>
+      <% end %>
+    </div>
 
 
 <div class="album py-5  bg-light">
@@ -18,7 +20,6 @@
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
                   <button type="button" class="btn btn-sm btn-outline-secondary"><%= link_to 'Show', event %></button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">編集</button>
                 </div>
               </div>
             </div>

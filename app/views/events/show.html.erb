@@ -1,22 +1,42 @@
 
 <p id="notice"><%= notice %></p>
-<div class="login">
-  <div class="heading">
-    <p>
-      <strong>Name:</strong>
-      <%= @event.event_name %>
-      <% if @event.flyer.url != nil %>
-      <%= image_tag @event.flyer.url %>
-      <% end %>
-    </p>
-    <%= link_to 'Reservation', new_event_reservation_path(@event, @reservation) %>|
-    <%= link_to 'Edit', edit_event_path(@event) %> |
-    <%= link_to 'Back', events_path %>
-    <p>質問一覧</p>
-    <div id="comments_area">
-        <!-- 投稿されたコメント一覧をブログの詳細ページに表示するためのrender -->
-        <%= render partial: 'comments/index', locals: { comments: @comments, event: @event } %>
+
+    <form class="form-signin">
+  <div class="text-center mb-4">
+    <div class="mb-4">
+    <% if @event.flyer.url != nil %>
+     <%= image_tag @event.flyer.url %>
+    <% end %>
     </div>
-    <%= render partial: 'comments/form', locals: { comment: @comment, event: @event } %>
+    <h1 class="h3 mb-3 font-weight-normal"><%= @event.event_name %></h1>
+    <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+  </div>
+    <p>団体名: </p>
+    <p>期間: <%= @event.period %></p>〜
+    <p>場所: </p>
+    <p>金額: <%= @event.total_price %></p>
+    <p>脚本: </p>
+    <p>演出: </p>
+
+
+  <button class="btn btn-lg btn-secondry btn-block width " type="submit"><%= link_to 'Reservation', new_event_reservation_path(@event, @reservation) %></button>
+</form>
+
+<p>質問一覧</p>
+
+  <!-- このcomments_areaというHTMLのidを取得して、そのdivの部分だけを更新する -->
+  <div id="comments_area">
+    <!-- 投稿されたコメント一覧をeventの詳細ページに表示するためのrender -->
+    <%= render partial: 'comments/index', locals: { comments: @comments, event: @event } %>
+  </div>
+  <!-- コメント入力欄をeventの詳細ページに表示するためのrender -->
+  <%= render partial: 'comments/form', locals: { comment: @comment, event: @event } %>
+<br/>
   </div>
 </div>
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>
+<br>
+<br>
+<br>
+
