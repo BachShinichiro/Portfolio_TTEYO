@@ -1,5 +1,6 @@
 <div class="login">
   <div class="heading">
+   <div class="event-form">
     <%= form_with(model: event, local: true) do |form| %>
       <div class="field">
         <li><%= form.label :flyer %></li>
@@ -10,22 +11,23 @@
         <li><%= form.datetime_field :period %></li>~
         <li><%= form.datetime_field :period %></li>
         <li><%= form.label :tikcket_type %></li>
-        <li><%= form.text_field :tikcket_type %></li>
+        <li><%= form.select :tikcket_type, ["1", "2", "3", "4", "5"], include_blank: "選択して下さい" %></li>
         <li><%= form.label :number_of_tiket %></li>
-        <li><%= form.number_field :number_of_tiket %></li>
+        <li><%= form.select  :number_of_tiket, ["一般席", "特別席", "招待"], include_blank: "選択して下さい" %></li>
         <li><%= form.label :total_price %></li>
         <li><%= form.label '4000円' %></li>
         <li><%= form.label :cast_name %></li>
         <li><%= form.text_field :cast_name %></li>
+        <li><%= form.label :status %></li>
+        <li><%= form.select :status, ["公演前", "公演中", "公演後"], include_blank: "選択して下さい" %></li>
         <li><%= form.label :remarks %></li>
         <li><%= form.text_area :remarks %></li>
-
       </div>
-
-      <div class="actions">
-      
-        <%= form.submit %>
-      </div>
-    <% end %>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+   <% end %>
   </div> 
 </div>
+
+<br>
