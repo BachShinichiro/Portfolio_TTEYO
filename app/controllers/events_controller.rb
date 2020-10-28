@@ -6,7 +6,7 @@ class EventsController < ApplicationController
 
   def index
     @q = Event.ransack(params[:q])
-  @events = @q.result(distinct: true)
+    @events = @q.result(distinct: true)
   end
 
   def show
@@ -54,10 +54,10 @@ class EventsController < ApplicationController
   end
 
   def check_user
-    if current_user != @user
+    set_event
+    if current_user.id != @event.user_id
       flash[:notice] = '他のユーザーの投稿は修正できません'
-      redirect_to pictures_path 
+      redirect_to events_path 
     end
   end
-
 end
