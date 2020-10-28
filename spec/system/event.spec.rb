@@ -1,21 +1,17 @@
 require 'rails_helper'
 RSpec.describe 'イベント管理機能', type: :system do
-  describe '新規作成機能' do
-    context 'イベントを新規作成した場合' do
-      it '作成したイベントが表示される' do
-      end
+  describe '投稿一覧画面' do
+    before do
+      @user = FactoryBot.create(:client)
+      @event = FactoryBot.create(:event, user: @user)
+      visit new_user_session_path
+      fill_in "Eメール", with: "user@example.com"
+      fill_in "パスワード", with: "111111"
+      click_button 'ログイン'
     end
-  end
-  describe '一覧表示機能' do
-    context '一覧画面に遷移した場合' do
-      it '作成済みのイベント一覧が表示される' do
-      end
-    end
-  end
-  describe '詳細表示機能' do
-     context '任意のイベント詳細画面に遷移した場合' do
-       it '該当イベントの内容が表示される' do
-       end
-     end
+    context '投稿を作成した場合' do
+      it '作成済みの投稿が表示される' do
+        visit events_path
+        expect(page).to have_content 'イベント１'
   end
 end
