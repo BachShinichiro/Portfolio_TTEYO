@@ -17,7 +17,11 @@ gem 'devise-i18n'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'ransack'
-
+gem 'rspec-rails'
+gem 'spring-commands-rspec'
+gem 'factory_bot_rails'
+gem 'faker'
+gem 'launchy'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -38,6 +42,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   gem 'chromedriver-helper'
+  gem 'webdrivers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
