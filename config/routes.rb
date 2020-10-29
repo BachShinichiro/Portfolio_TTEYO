@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   root 'tops#index'
-  if Rails.env.development?
+  unless Rails.env.production?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 end
