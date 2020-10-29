@@ -1,6 +1,7 @@
 class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :event
-  # validates :name,  presence: true, length: { maximum: 30 }
-  # validates :content,  presence: true, length: { maximum: 144 }
+  validates :number_of_ticket,  presence: true
+  validates :date,  presence: true
+  enum status: { 一般席: 0, 招待席: 1 }
 end

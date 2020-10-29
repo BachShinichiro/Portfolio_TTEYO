@@ -7,4 +7,9 @@ class Event < ApplicationRecord
   enum status: { 公演前: 0, 公演中: 1, 公演後: 2 }
 
   validates :event_name,  presence: true, length: { maximum: 30 }
+  validates :company_name,  presence: true, length: { maximum: 30 }
+  validates :place,  presence: true, length: { maximum: 30 }
+  validates :period,  presence: true
+  validates :period_end,  presence: true
+  validates :status,  presence: true
 end
