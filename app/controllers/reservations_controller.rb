@@ -36,7 +36,7 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation.destroy
-    redirect_to reservations_path, notice: 'イベントを削除しました'
+    redirect_to reservations_path(current_user), notice: 'イベントを削除しました'
   end
 
   private
