@@ -1,18 +1,24 @@
-# FactoryBot.define do
-#   factory :event do
-#     name { 'セーター' }
-#     description { '去年売っていたものを探しています' }
-#     budget { 5000 }
-#     deadline { "2020-10-30 09:00:00" }
-#     category { 'レディース' }
-#     status { '募集中' }
-#   end
-#   factory :item2, class: Item do
-#     name { 'コート' }
-#     description { '一昨年売っていたものを探しています' }
-#     budget { 10000 }
-#     deadline { "2020-11-15 09:00:00" }
-#     category { 'メンズ' }
-#     status { '募集終了' }
-#   end
-# end
+FactoryBot.define do
+  factory :event do
+    event_name { '勇気とジュリエット' }
+    company_name { '劇団上昇志向' }
+    place { '帝国劇場' }
+    period { DateTime.now }
+    period_end { DateTime.now }
+    price  { '5000' }
+    direction  { 'シェイクシェイク勇気' }
+    status { '公演前' }
+    remarks  { '特になし' }
+  end
+  factory :event2, class: Event do
+    event_name { 'ロミオと豆枝晋' }
+    company_name { '劇団中央みぎレフト' }
+    place { '鳥取市民会館' }
+    period { DateTime.now }
+    period_end { DateTime.now }
+    price  { '100' }
+    direction  { '豆枝晋/タ魯迅' }
+    status { '公演前' }
+    remarks  { '特になし' }
+  end
+end
