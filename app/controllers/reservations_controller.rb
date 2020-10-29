@@ -1,10 +1,10 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:edit, :show, :update, :destroy]
-  before_action :set_event, only: [:new, :create, :show, :index]
+  before_action :set_event
   
   
   def index
-    @reservations = current_user.reservations
+    @reservations = @event.reservations 
   end
 
   def new
@@ -20,7 +20,7 @@ class ReservationsController < ApplicationController
     @reservation.event = @event
     if @reservation.save
       ReservationMailer.reservation_mail(@reservation).deliver  ##追記
-      redirect_to event_reservation_path(@event, @reservation), notice: 'Reservation was successfully created.'
+      redirect_to event_reservation_path(@event, @reservation), notice: '予約完了いたしました！確認メールご確認ください.'
     else
       render :new
     end
@@ -28,7 +28,7 @@ class ReservationsController < ApplicationController
 
   def update
     if @reservation.update(reservation_params)
-      redirect_to reservations_path
+      redirect_to event_reservations_path(@event, @reservation)
     else
       render :new
     end
@@ -36,7 +36,11 @@ class ReservationsController < ApplicationController
 
   def destroy
     @reservation.destroy
-    redirect_to reservations_path(current_user), notice: 'イベントを削除しました'
+    if current_user.client 
+      redirect_to event_reservations_path(@event, @reservation), notice: '予約を削除しました'
+    else
+      redirect_to user_path(current_user)
+    end
   end
 
   private
