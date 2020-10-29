@@ -11,42 +11,80 @@
   </div>
 </div>
 <br></br>
-<%= link_to 'イベントを作る', new_event_path %>
-<div class="table-responsive">
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th scope="col">ID</th>
-        <th scope="col">タイトル</th>
-        <th scope="col">期間</th>
-        <th scope="col">場所</th>
-        <th scope="col">金額</th>
-        <th scope="col">脚本</th>
-        <th scope="col">演出</th>
-        <th scope="col">予約一覧</th>
-        <th scope="col">その他</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
 
-
-    <tbody>
-      <% @user.events.each do |event| %>
+<% if current_user.client  %>
+  <%= link_to 'イベントを作る', new_event_path %>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
         <tr>
-          <td class="task_row"><%= event.id %></td>
-          <td class="task_row"><%= link_to event.event_name , event_reservations_path(event) %></td>
-          <td class="task_row"><%= event.period.strftime('%Y/%m/%d') %></td>
-          <td class="task_row"><%= event.status %></td>
-          <td class="task_row"><%= event.remarks %></td>
-          <td class="task_row"><%= event.created_at.strftime('%Y/%m/%d') %></td>
-          <td class="task_row"><%= link_to '予約一覧' ,event_reservations_path(event) %></td>
-    
-          <td ><%= link_to 'show', event_path(event) ,class: "btn btn-outline-primary" %></td>
-          <td ><%= link_to 'edit', edit_event_path(event) ,class: "btn btn-outline-warning" %></td>
-          <td ><%= link_to 'delete', event_path(event), method: :delete, data: { confirm: t('view.tasks.index.Are you sure?') } ,class: "btn btn-outline-danger" %></td>
-
+          <th scope="col">ID</th>
+          <th scope="col">タイトル</th>
+          <th scope="col">期間</th>
+          <th scope="col">場所</th>
+          <th scope="col">金額</th>
+          <th scope="col">脚本</th>
+          <th scope="col">演出</th>
+          <th scope="col">予約一覧</th>
+          <th scope="col">その他</th>
+          <th colspan="3"></th>
         </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+      </thead>
+
+
+      <tbody>
+        <% @user.events.each do |event| %>
+          <tr>
+            <td class="task_row"><%= event.id %></td>
+            <td class="task_row"><%= link_to event.event_name , event_reservations_path(event) %></td>
+            <td class="task_row"><%= event.period.strftime('%Y/%m/%d') %></td>
+            <td class="task_row"><%= event.status %></td>
+            <td class="task_row"><%= event.remarks %></td>
+            <td class="task_row"><%= event.created_at.strftime('%Y/%m/%d') %></td>
+            <td class="task_row"><%= link_to '予約一覧' ,event_reservations_path(event) %></td>
+      
+            <td ><%= link_to 'show', event_path(event) ,class: "btn btn-outline-primary" %></td>
+            <td ><%= link_to 'edit', edit_event_path(event) ,class: "btn btn-outline-warning" %></td>
+            <td ><%= link_to 'delete', event_path(event), method: :delete, data: { confirm: t('view.tasks.index.Are you sure?') } ,class: "btn btn-outline-danger" %></td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% else%>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">タイトル</th>
+          <th scope="col">日にち</th>
+          <th scope="col">枚数</th>
+          <th scope="col">備考</th>
+          <th scope="col">イベントの詳細</th>
+          <th scope="col">予約の編集</th>
+          <th scope="col">予約の削除</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+
+      <tbody>
+        <% @user.reservations.each do |r| %>
+          <tr>
+            <td class="task_row"><%= r.event.event_name %></td>
+            <td class="task_row"><%= r.date %></td>
+            <td class="task_row"><%= r.number_of_ticket %></td>
+            <td class="task_row"><%= r.remarks %></td>
+            <td class="task_row"><%= r.remarks %></td>
+
+            <td ><%= link_to 'show', event_path(r.event) ,class: "btn btn-outline-primary" %></td>
+            <td ><%= link_to 'edit', edit_event_reservation_path(r.event,r) ,class: "btn btn-outline-warning" %>
+            </td><td ><%= link_to 'delete', event_reservation_path(r.event,r), method: :delete, data: { confirm: t('view.tasks.index.Are you sure?') } ,class: "btn btn-outline-danger" %></td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+<% end %>

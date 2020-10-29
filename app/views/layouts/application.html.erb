@@ -42,7 +42,7 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <div class="masthead">
-      <%=link_to image_tag("top.png"), events_path %>
+      <%=link_to image_tag("top.png"), events_path ,id:"topimage" %>
     </div>
     <%= yield %>
     <footer class="fixed-bottom">

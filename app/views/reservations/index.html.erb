@@ -8,7 +8,6 @@
       <th>予約者の名前</th>
       <th>日にち</th>
       <th>枚数</th>
-      <th>キャスト</th>
       <th>備考欄</th>
       <th colspan="3"></th>
     </tr>
@@ -18,11 +17,11 @@
     <% @reservations.each do |r| %>
       <tr>
         <td><%= r.id%></td>
-        <td><%= r.ticket_type%></td>
+        <td><%= r.user.name%></td>
+        <td><%= r.date%></td>
         <td><%= r.number_of_ticket%></td>
         <td><%= r.total_price%></td>
         <td><%= r.remarks%></td>
-        <td><%= r.cast_name%></td>
         <td><%= link_to 'Show', event_reservation_path(event_id: r.event_id, id: r.id) %></td>
         <td><%= link_to 'Edit', edit_event_reservation_path(event_id: r.event_id, id: r.id) %></td>
         <td><%= link_to 'Destroy', event_reservation_path(event_id: r.event_id, id: r.id), method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -2,6 +2,6 @@
 
 <%= render 'form', reservation: @reservation %>
 
-<%= link_to 'Show', @reservation %> |
+<%= link_to 'Show', event_reservation_path(@event, @reservation) %> |
 
 <%= link_to 'Back', event_reservations_path %>
