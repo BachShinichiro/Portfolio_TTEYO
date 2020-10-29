@@ -4,8 +4,12 @@
 
 .heading {
   text-align: center;
+  color: aliceblue;
+  list-style: none;
+
 }
 
 .heading .field:hover {
-  background-color: aliceblue;
+  font-weight: bold;
+  font-size: 20px;
 }
