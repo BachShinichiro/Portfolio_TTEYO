@@ -9,6 +9,7 @@ Bundler.require(*Rails.groups)
 module TTEYO
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
+    config.assets.initialize_on_precompile = false
     config.load_defaults 5.2
     config.i18n.default_locale = :ja
     config.generators do |g|
@@ -26,4 +27,5 @@ module TTEYO
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
   end
+
 end
