@@ -3,7 +3,14 @@
     <%= form_with(model: [@event, @reservation]) do |form| %>
       <div class="field">
         <strong>Name:</strong>
-
+         <div class="text-center mb-4">
+          <div class="mb-4">
+          <% if @event.flyer.url != nil %>
+          <%= image_tag @event.flyer.url %>
+          <% end %>
+          </div>
+        </div>
+        
         <li><%= form.label :date %></li>
         <li><%= form.datetime_field	 :date %></li>
         <li><%= form.label :ticket_type %></li>

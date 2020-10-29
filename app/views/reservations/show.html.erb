@@ -1,12 +1,22 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
-  <%= @reservation.event.event_name %>
-  <% if @reservation.event.flyer != nil %>
-  <%= image_tag @reservation.event.flyer.url %>
-  <% end %>
-</p>
+<div class="text-center mb-4">
+  <div class="mb-4">
+    <% if @event.flyer.url != nil %>
+      <%= image_tag @event.flyer.url %>
+    <% end %>
+  </div>
+</div>
+<div class=event_show>
+  <p>団体名: <%= @event.company_name %></p>
+  <p>期間: <%= @event.period %>~<%= @event.period_end %></p>
+  <p>場所: <%= @event.place %></p>
+  <p>金額: <%= @event.price %></p>
+  <p>脚本/演出: <%= @event.direction %></p>
+  <p>ステータス: <%= @event.status %></p>
+  <p>備考: <%= @event.remarks %></p>
+  <%= link_to 'Edit', edit_event_reservation_path(@reservation) %> |
+  <%= link_to 'Back', event_reservations_path %>
+</div>
 
 <%= link_to 'Edit', edit_event_reservation_path(@reservation) %> |
 <%= link_to 'Back', event_reservations_path %>

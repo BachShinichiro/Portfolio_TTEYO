@@ -11,7 +11,7 @@
   </div>
 </div>
 <br></br>
-
+<%= link_to 'イベントを作る', new_event_path %>
 <div class="table-responsive">
   <table class="table table-striped">
     <thead>
@@ -39,7 +39,7 @@
           <td class="task_row"><%= event.status %></td>
           <td class="task_row"><%= event.remarks %></td>
           <td class="task_row"><%= event.created_at.strftime('%Y/%m/%d') %></td>
-          <td class="task_row"><%= link_to '予約一覧' ,root_path %></td>
+          <td class="task_row"><%= link_to '予約一覧' ,event_reservations_path(event) %></td>
     
           <td ><%= link_to 'show', event_path(event) ,class: "btn btn-outline-primary" %></td>
           <td ><%= link_to 'edit', edit_event_path(event) ,class: "btn btn-outline-warning" %></td>
