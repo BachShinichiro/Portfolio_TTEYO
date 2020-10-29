@@ -8,6 +8,12 @@
   padding-bottom: 120px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
   background-image:url("/images/bg10.JPG");
+  width: 100%;
+}
+
+.btn {
+  border: none;
+  width: 100%;
 }
 
 footer {
@@ -74,6 +80,7 @@ h3 {
 
 h3:hover {
   background-color: #c8c9cc;
+
 }
 
 h5 {
@@ -95,10 +102,10 @@ h3 a {
   color: azure;
 }
 
-.masthead {
-  text-align: center;
+h3 a:hover {
+  text-decoration: none;
 }
 
-.masthead a {
-  
+.masthead {
+  text-align: center;
 }
