@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
   before_action :check_user, only: [:edit, :update, :destroy]
-
+  before_action :check_client, only: [:new, :create, :edit, :update]
 
   def index
     @q = Event.ransack(params[:q])
@@ -42,11 +42,10 @@ class EventsController < ApplicationController
     @event.destroy
     redirect_to events_path, notice: 'イベントを削除しました'
   end
-
-
+  
   private
   def event_params
-    params.require(:event).permit(:event_name, :period, :ticket_type, :number_of_ticket, :total_price, :cast_name, :status, :remarks,:flyer, :flyer_cache)
+    params.require(:event).permit(:event_name, :period, :period_end, :company_name, :price, :place, :status, :direction ,:remarks,:flyer, :flyer_cache)
   end
 
   def set_event
@@ -57,6 +56,13 @@ class EventsController < ApplicationController
     set_event
     if current_user.id != @event.user_id
       flash[:notice] = '他のユーザーの投稿は修正できません'
+      redirect_to events_path 
+    end
+  end
+
+  def check_client
+    if current_user.client == false
+      flash[:notice] = '一般ユーザーは投稿できません'
       redirect_to events_path 
     end
   end
