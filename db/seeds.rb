@@ -36,7 +36,7 @@ end
                 )
 end
 
-10.times do |n|
+20.times do |n|
   event_name = "イベント#{n + 1}"
   company_name = "劇団#{n + 1}"
   place = "劇場#{n + 1}"
