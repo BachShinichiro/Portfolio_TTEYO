@@ -24,17 +24,7 @@ User.create!(name: 'お客様',
                 )
 end
 
-10.times do |n|
-  name = Faker::Games::Pokemon.name
-  email = Faker::Internet.email
-  password = "password"
-  User.create!(name: name,
-                email: email,
-                password: password,
-                password_confirmation: password,
-                client: false
-                )
-end
+
 
 20.times do |n|
   event_name = "イベント#{n + 1}"
