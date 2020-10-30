@@ -23,6 +23,7 @@ gem 'factory_bot_rails'
 gem 'faker'
 gem 'launchy'
 gem 'rails-i18n'
+gem 'dotenv-rails'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
