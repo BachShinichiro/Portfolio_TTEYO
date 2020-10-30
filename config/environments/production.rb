@@ -64,14 +64,14 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "TTEYO_#{Rails.env}"
  
   config.action_mailer.perform_caching = false
-  config.action_mailer.default_url_options = { host: 'serene-everglades-79293.herokuapp.com'}
+  config.action_mailer.default_url_options = { host: 'quiet-crag-92444.herokuapp.com'}
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
       address:        "smtp.gmail.com",
       port:           587,
       user_name:      ENV['MAIL_USER_NAME'],
       password:       ENV['MAIL_PASSWORD'],
-      domain:         'serene-everglades-79293.herokuapp.com',
+      domain:         'quiet-crag-92444.herokuapp.com',
       enable_starttls_auto: true,
       authentication: :plain
   }
