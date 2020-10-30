@@ -61,32 +61,11 @@ end
 end
 
 20.times do |n|
-  date = Faker::Date.between(from: '2020-09-28', to: '2020-10-15')
-  number_of_ticket = rand(0..5)
-  ticket_type = rand(0..1)
-  user_id = User.last.id,
-  event_id = Event.last.id
-  Reservation.create!(date: date,
-               number_of_ticket: number_of_ticket,
-               ticket_type: ticket_type,
-               user_id:  user_id,
-               event_id: event_id
-               )
-end
-
-20.times do |n|
   Reservation.create!(
     date: Date.today.since(1.weeks),
     number_of_ticket: 2,
     ticket_type: 0,
     user_id: User.first.id + n,
     event_id: Event.first.id + n
-  )
-end
-
-20.times do |n|
-  content = "質問#{n + 1}"
-  Comment.create!(content: "content",
-                  event_id: Event.first.id + n
   )
 end
