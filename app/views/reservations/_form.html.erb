@@ -1,6 +1,17 @@
+<% if @reservation.errors.any? %>
+  <div id = "error_expanation" class = "text-center" >
+  <h2><%= @reservation.errors.count %>件のエラー</h2>
+    <ul style = "list-style: none;">
+      <% @reservation.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <div class="login">
   <div class="heading">
-    <%= form_with(model: [@event, @reservation]) do |form| %>
+    <%= form_with(model: [@event, @reservation], local: true) do |form| %>
       <div class="field">
         <strong>Name:</strong>
         <div class="text-center mb-4">
