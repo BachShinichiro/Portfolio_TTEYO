@@ -1,14 +1,19 @@
 class CommentsController < ApplicationController
   before_action :set_event, only: [:create, :edit, :update]
+  skip_before_action :authenticate_user!
 
   def create
-    @comment = @event.comments.build(comment_params)
-    respond_to do |format|
-      if @comment.save
-        format.js { render :index }
-      else
-        format.html { redirect_to event_path(@event), notice: '投稿できませんでした...' }
+    if user_signed_in? 
+      @comment = @event.comments.build(comment_params)
+      respond_to do |format|
+        if @comment.save
+          format.js { render :index }
+        else
+          format.html { redirect_to event_path(@event), notice: '投稿できませんでした...' }
+        end
       end
+    else
+      redirect_to event_path(@event), notice: '質問するにはログインしてください' 
     end
   end
 
