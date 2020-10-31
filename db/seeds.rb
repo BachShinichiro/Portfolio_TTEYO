@@ -1,5 +1,5 @@
 User.create!(name: '主催者',
-  email: 'kannrisya@test.com',
+  email: 'syusaisya@example.com',
   password: 'password',
   password_confirmation: 'password',
   client: true,
@@ -7,7 +7,7 @@ User.create!(name: '主催者',
   )
 
 User.create!(name: 'お客様',
-  email: 'okyakusama@test.com',
+  email: 'okyakusama@example.com',
   password: 'password',
   password_confirmation: 'password',
   client: false,

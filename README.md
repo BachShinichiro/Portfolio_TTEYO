@@ -18,11 +18,11 @@ Rails 5.2.4
 
 ## ログイン用アカウント
 -主催者ユーザー<br>
-mail:kannrisya@test.com<br>
+mail:syusaisya@example.com<br>
 password:password
 
 -お客様ユーザー<br>
-mail:okyakusama@test.com<br>
+mail:okyakusama@example.com<br>
 password:password
 
 - [ ] 主催者は、マイページからイベントを立ち上げることができます。
