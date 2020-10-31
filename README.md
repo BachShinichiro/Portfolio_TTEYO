@@ -17,12 +17,12 @@ Rails 5.2.4
 - [ ] 掲示板コメント機能
 
 ## ログイン用アカウント
--主催者ユーザー
-mail:kannrisya@test.com
+-主催者ユーザー<br>
+mail:kannrisya@test.com<br>
 password:password
 
--お客様ユーザー
-mail:okyakusama@test.com
+-お客様ユーザー<br>
+mail:okyakusama@test.com<br>
 password:password
 
 - [ ] 主催者は、マイページからイベントを立ち上げることができます。
