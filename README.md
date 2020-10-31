@@ -16,6 +16,30 @@ Rails 5.2.4
 - [ ] メール送信機能
 - [ ] 掲示板コメント機能
 
+## ログイン用アカウント
+-主催者ユーザー
+mail:kannrisya@test.com
+password:password
+
+-お客様ユーザー
+mail:okyakusama@test.com
+password:password
+
+主催者は、マイページからイベントを立ち上げることができます。
+投稿したイベントはマイページに表示され予約したお客様を一覧で見ることができます。
+
+
+お客様はイベントに対して予約することができ、
+予約が完了すると新規登録時に登録したメールアドレスに完了メールが飛びます。
+(予約したときの完了メールは主催者にも飛びます)
+お客様のマイページから予約したイベントを確認することができます。
+ログインしたユーザーはイベントの詳細ページにて質問をコメントすることができます。
+
+
+
+
+
+password
 ## カタログ設計
 https://docs.google.com/spreadsheets/d/1m7UpFY9MoG_pMLh4w_KYLdmSs0KF2odvffEuLwPeXDg/edit?usp=sharing
 ## テーブル定義書
