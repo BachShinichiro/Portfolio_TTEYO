@@ -41,7 +41,7 @@
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-    <div class="masthead">
+    <div class="topimage">
       <%=link_to image_tag("top.png"), events_path ,id:"topimage" %>
     </div>
     <%= yield %>

@@ -106,9 +106,12 @@ h3 a:hover {
   text-decoration: none;
 }
 
-.masthead {
+.topimage {
   text-align: center;
+  // display: inline-block;
 }
+
+
 
 .txt_ellipsis{
   overflow: hidden;
@@ -118,3 +121,14 @@ h3 a:hover {
   -o-text-overflow: ellipsis;
 }
 
+// .topimage:hover {
+//   background-color: #DDDDDD;
+// }
+
+#topimage {
+  height: 200px;
+}
+
+img:hover {
+  background-color: #DDDDDD;
+}
