@@ -25,11 +25,11 @@ password:password
 mail:okyakusama@test.com
 password:password
 
-主催者は、マイページからイベントを立ち上げることができます。
+- [ ]主催者は、マイページからイベントを立ち上げることができます。
 投稿したイベントはマイページに表示され予約したお客様を一覧で見ることができます。
 
 
-お客様はイベントに対して予約することができ、
+- [ ]お客様はイベントに対して予約することができ、
 予約が完了すると新規登録時に登録したメールアドレスに完了メールが飛びます。
 (予約したときの完了メールは主催者にも飛びます)
 お客様のマイページから予約したイベントを確認することができます。
@@ -39,7 +39,6 @@ password:password
 
 
 
-password
 ## カタログ設計
 https://docs.google.com/spreadsheets/d/1m7UpFY9MoG_pMLh4w_KYLdmSs0KF2odvffEuLwPeXDg/edit?usp=sharing
 ## テーブル定義書
