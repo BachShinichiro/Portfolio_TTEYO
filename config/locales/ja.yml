@@ -1,0 +1,37 @@
+ja:
+  activerecord:
+    models:
+      event: ブログ
+      user: ユーザー
+      reservation: 予約
+      comment: コメント
+    attributes:
+      comment:
+        content: 内容
+      event:
+        event_name: タイトル
+        period: 公演初日
+        period_end: 公演最終日
+        status: 状態
+        remarks: 備考
+        flyer: フライヤー
+        company_name: 団体名
+        place: 場所
+        price: 値段
+        direction: 脚本/演出 
+      reservation:
+        date: 予約日
+        ticket_type: チケットの種類
+        number_of_ticket: チケットの枚数 
+        total_price: 合計金額
+        remarks: 備考欄
+        cast_name: キャスト
+      user:
+        title: タイトル
+        name: 名前
+        client:  主催者
+        email: メールアドレス
+        current_password: 現在のパスワード
+        password: パスワード
+        password_confirmation: 確認用パスワード
+        remember_me: ログインを記憶
