@@ -27,16 +27,16 @@ class CommentsController < ApplicationController
 
   def update
     @comment = @event.comments.find(params[:id])
+    if @comment.update(comment_params)
       respond_to do |format|
-        if @comment.update(comment_params)
-          flash.now[:notice] = 'コメントが編集されました'
-          format.js { render :index }
-        else
-          flash.now[:notice] = 'コメントの編集に失敗しました'
-          format.js { render :edit_error }
-        end
+        flash.now[:notice] = 'コメントが編集されました'
+        format.js { render :index }
       end
+    else
+      redirect_to event_path(@event), notice: 'コメントの編集に失敗しました'
+    end
   end
+
   
   def destroy
     @comment = Comment.find(params[:id])
