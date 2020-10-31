@@ -12,7 +12,7 @@
   <div class="field">
     <i class="far fa-comment-dots"></i>
     <%= form.label :content %>
-    <%= form.text_area :content, class:"form-control", placeholder: "テキストを入力"%>
+    <%= form.text_area :content, id: "comment_content_#{event.id}", class:"form-control", placeholder: "テキストを入力"%>
   </div>
   <div class="actions">
     <%= form.submit %>
