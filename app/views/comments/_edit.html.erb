@@ -10,7 +10,7 @@
     </div>
   <% end %>
   <div class="field">
-    <%= form.text_area :content, id: "comment_content_#{event.id}" %>
+    <%= form.text_area :content, id: "comment_content_#{event.id}", class: "form-control" %>
     <%= form.label :content %>
   </div>
   <div class="actions">
