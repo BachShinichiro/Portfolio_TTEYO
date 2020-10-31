@@ -17,7 +17,7 @@ ja:
         flyer: フライヤー
         company_name: 団体名
         place: 場所
-        price: 値段
+        price: 値段(日本円、税込み)
         direction: 脚本/演出 
       reservation:
         date: 予約日
