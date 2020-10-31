@@ -12,4 +12,14 @@ class Event < ApplicationRecord
   validates :period,  presence: true
   validates :period_end,  presence: true
   validates :status,  presence: true
+  validate  :date_not_before_today
+  validate  :period_not_before_period_end
+
+  def date_not_before_today
+    errors.add(:period, "は今日以降のものを選択してください") if period.nil? || period < Date.today
+  end
+  def period_not_before_period_end
+    errors.add(:period_end, "は初日以降のものを選択してください") if period_end.nil? || period_end < period
+  end
+
 end
