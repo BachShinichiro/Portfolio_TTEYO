@@ -3,6 +3,6 @@ class ReservationMailer < ApplicationMailer
   layout 'mailer'
   def reservation_mail(reservation)
     @reservation = reservation
-    mail to: "kitchen.number@gmail.com", subject: "予約の確認メール"
+    mail to: [reservation.user.email, reservation.event.user.email], subject: "予約の確認メール"
   end
 end
