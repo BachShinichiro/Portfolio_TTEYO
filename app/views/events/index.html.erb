@@ -1,12 +1,11 @@
     <br>
-    <div class="search">
+    <div class="search text-center">
       <%= search_form_for @q do |f| %>
         <%= f.label :event_name, "公演名で検索" %>
         <%= f.search_field :event_name_cont %>
         <%= f.submit "検索" %>
       <% end %>
     </div>
-
 
 <div class="album py-5  bg-light">
   <div class="container">
@@ -30,5 +29,5 @@
     </div>
   </div>
 </div>
-
-    <br>
+<%= paginate @events %>
+    <br>  <br>  <br>  <br>  <br>

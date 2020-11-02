@@ -24,6 +24,7 @@ gem 'faker'
 gem 'launchy'
 gem 'rails-i18n'
 gem 'dotenv-rails'
+gem 'kaminari'
 
 
 gem 'bootsnap', '>= 1.1.0', require: false
