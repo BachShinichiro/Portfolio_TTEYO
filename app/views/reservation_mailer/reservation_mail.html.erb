@@ -2,10 +2,10 @@
 <h4>name: <%= @reservation.user.email %></h4>
 <h4>予約内容の確認</h4>
 <p>タイトル: <%= @reservation.event.event_name %></p>
-<p>団体名: <%= @event.company_name %></p>
-<p>期間: <%= @event.period %>~<%= @event.period_end %></p>
-<p>場所: <%= @event.place %></p>
-<p>金額: <%= @event.price %>円</p>
-<p>脚本/演出: <%= @event.direction %></p>
-<p>ステータス: <%= @event.status %></p>
-<p>備考: <%= @event.remarks %></p>
+<p>団体名: <%= @reservation.event.company_name %></p>
+<p>場所: <%= @reservation.event.place %></p>
+<p>金額: <%= @reservation.event.price %>円</p>
+<p>予約日: <%= @reservation.date %></p>
+<p>チケットの種類: <%= @reservation.ticket_type %></p>
+<p>チケットの枚数: <%= @reservation.number_of_ticket %></p>
+<p>備考欄: <%= @reservation.remarks %></p>
