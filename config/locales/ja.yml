@@ -15,6 +15,7 @@ ja:
         status: 状態
         remarks: 備考
         flyer: フライヤー
+        time_table: タイムテーブル
         company_name: 団体名
         place: 場所
         price: 値段(日本円、税込み)
