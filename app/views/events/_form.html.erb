@@ -40,21 +40,21 @@
         <div class="actions">
           <%= form.submit %>
         </div>
-   <% end %>
-  <%= form.fields_for :select_date do |s| %>
-    <h2>最寄駅<%= s.index + 1 %></h2>
-    <li><%= s.label :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-    <li><%= s.datetime_field :event_date %></li>
-  <% end %>
+      <%= form.fields_for @select_date do |s| %>
+        <h2>最寄駅<%= s.index + 1 %></h2>
+        <li><%= s.label :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+        <li><%= s.datetime_field :event_date %></li>
+      <% end %>
+    <% end %>
   </div> 
 </div>
 
