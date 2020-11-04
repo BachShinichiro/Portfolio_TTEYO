@@ -36,6 +36,9 @@ password:password
 ログインしたユーザーはイベントの詳細ページにて質問をコメントすることができます。
 
 
+![スクリーンショット 2020-11-04 15 03 45](https://user-images.githubusercontent.com/66770962/98075177-3f987c00-1eaf-11eb-9aab-fb85b64f61fc.png)
+![スクリーンショット 2020-11-04 15 04 08](https://user-images.githubusercontent.com/66770962/98075187-4626f380-1eaf-11eb-9533-f8354d0c3edc.png)
+![スクリーンショット 2020-11-04 15 04 27](https://user-images.githubusercontent.com/66770962/98075196-4921e400-1eaf-11eb-9ab9-72ee1b9e0ad9.png)
 
 
 
