@@ -1,6 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:edit, :show, :update, :destroy]
   before_action :set_event
+  before_action :set_select_date
   
   
   def index
@@ -47,10 +48,18 @@ class ReservationsController < ApplicationController
   def set_reservation
     @reservation = Reservation.find(params[:id])
   end
+
   def set_event
     @event = Event.find(params[:event_id])
   end
+
+  def set_select_date
+    @select_date = SelectDate.find(params[:id])
+  end
+
+
+
   def reservation_params
-    params.require(:reservation).permit(:date, :ticket_type, :number_of_ticket, :total_price, :remarks, :cast_name)
+    params.require(:reservation).permit(:date, :ticket_type, :number_of_ticket, :total_price, :remarks, :cast_name, select_dates_attributes: [:event_date, :id])
   end
 end

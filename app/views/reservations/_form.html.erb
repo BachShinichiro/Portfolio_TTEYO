@@ -23,6 +23,7 @@
         </div>
         <li><%= form.label :date %></li>
         <li><%= form.datetime_field	 :date %></li>
+        <li> <%= form.collection_select(:select_date, @select_dates, :id, :event_dates ) %></li>
         <li><%= form.label :ticket_type %></li>
         <li><%= form.select :ticket_type , ["一般席", "招待席"], include_blank: "選択して下さい"%></li>
         <li><%= form.label :number_of_ticket %></li>

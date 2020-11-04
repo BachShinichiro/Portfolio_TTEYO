@@ -13,7 +13,7 @@
 <div class="login">
   <div class="heading">
    <div class="event-form">
-    <%= form_with(model: event, local: true) do |form| %>
+    <%= form_with(model:@event, local: true) do |form| %>
       <div class="field">
         <li><%= form.label :flyer %></li>
         <li><%= form.file_field :flyer %></li>
@@ -41,6 +41,20 @@
           <%= form.submit %>
         </div>
    <% end %>
+  <%= form.fields_for :select_date do |s| %>
+    <h2>最寄駅<%= s.index + 1 %></h2>
+    <li><%= s.label :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+    <li><%= s.datetime_field :event_date %></li>
+  <% end %>
   </div> 
 </div>
 

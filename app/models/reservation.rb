@@ -1,6 +1,7 @@
 class Reservation < ApplicationRecord
   belongs_to :user
   belongs_to :event
+  has_many :select_dates
   validates :date,  presence: true
   validates :remarks, length: { maximum: 36 }
   validate  :date_not_before_today
