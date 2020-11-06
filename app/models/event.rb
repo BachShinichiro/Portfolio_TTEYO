@@ -2,6 +2,8 @@ class Event < ApplicationRecord
   belongs_to :user
   has_many :reservations
   has_many :comments, dependent: :destroy
+  has_many :select_dates, dependent: :destroy
+  accepts_nested_attributes_for :select_dates, allow_destroy: true
   mount_uploader :flyer, ImageUploader
   mount_uploader :time_table, ImageUploader
 

@@ -37,6 +37,17 @@
         <li><%= form.label :remarks %></li>
         <li><%= form.text_area :remarks %></li>
       </div>
+      <div class="tag-area">
+        <li><%= form.label :select_dates %></li>
+        <%= form.fields_for :select_dates do |c|%>
+          <div class="js-file-group" data-index="<%= c.index %>" >
+            <%= c.datetime_field :event_date %>
+          </div>
+        <% end %>
+      </div>
+      <button class="add-form-btn">
+        追加する
+      </button>
         <div class="actions">
           <%= form.submit %>
         </div>

@@ -9,6 +9,7 @@ class ReservationsController < ApplicationController
 
   def new
     @reservation = current_user.reservations.build
+    @select_dates = @event.select_dates
   end
 
   def show;end
@@ -51,6 +52,6 @@ class ReservationsController < ApplicationController
     @event = Event.find(params[:event_id])
   end
   def reservation_params
-    params.require(:reservation).permit(:date, :ticket_type, :number_of_ticket, :total_price, :remarks, :cast_name)
+    params.require(:reservation).permit(:date, :ticket_type, :number_of_ticket, :total_price, :remarks, :cast_name, select_dates_attributes: [:event_date])
   end
 end
