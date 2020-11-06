@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_02_091602) do
+ActiveRecord::Schema.define(version: 2020_11_05_074647) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 2020_11_02_091602) do
     t.string "cast_name"
   end
 
+  create_table "select_dates", force: :cascade do |t|
+    t.datetime "event_date"
+    t.bigint "event_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["event_id"], name: "index_select_dates_on_event_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -80,4 +88,5 @@ ActiveRecord::Schema.define(version: 2020_11_02_091602) do
 
   add_foreign_key "comments", "events"
   add_foreign_key "events", "users"
+  add_foreign_key "select_dates", "events"
 end
