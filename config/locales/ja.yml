@@ -5,6 +5,7 @@ ja:
       user: ユーザー
       reservation: 予約
       comment: コメント
+      select_date: 公演日
     attributes:
       comment:
         content: 内容
@@ -36,3 +37,5 @@ ja:
         password: パスワード
         password_confirmation: 確認用パスワード
         remember_me: ログインを記憶
+      select_date:
+        event_date: 詳細日

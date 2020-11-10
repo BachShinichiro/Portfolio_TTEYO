@@ -42,7 +42,11 @@
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
     <div class="topimage">
+    <% if user_signed_in? %>
+      <%=link_to image_tag("topHira.png"), events_path ,id:"topimage" %>
+    <% else %>
       <%=link_to image_tag("top.png"), events_path ,id:"topimage" %>
+    <% end %>
     </div>
     <%= yield %>
     <footer class="fixed-bottom">

@@ -37,7 +37,7 @@ $(function(){
     return html;
   }
 
-  let fileIndex = [1, 2, 3, 4] // 追加するフォームのインデックス番号を用意
+  let fileIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] // 追加するフォームのインデックス番号を用意
   var lastIndex = $(".js-file-group:last").data("index"); // 編集フォーム用（すでにデータがある分のインデックス番号が何か取得しておく）
   fileIndex.splice(0, lastIndex); // 編集フォーム用（データがある分のインデックスをfileIndexから除いておく）
   let fileCount = $(".hidden-destroy").length; // 編集フォーム用（データがある分のフォームの数を取得する）
