@@ -41,7 +41,7 @@
     <% flash.each do |key, value| %>
       <%= content_tag(:div, value, class: "#{key}") %>
     <% end %>
-    <div class="topimage">
+    <div class="topimage col-12">
     <% if user_signed_in? %>
       <%=link_to image_tag("topHira.png"), events_path ,id:"topimage" %>
     <% else %>
