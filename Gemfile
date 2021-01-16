@@ -25,7 +25,8 @@ gem 'launchy'
 gem 'rails-i18n'
 gem 'dotenv-rails'
 gem 'kaminari'
-
+gem 'fog-aws'
+gem 'dotenv-rails'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
