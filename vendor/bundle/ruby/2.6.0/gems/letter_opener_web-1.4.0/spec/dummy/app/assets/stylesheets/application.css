@@ -27,5 +27,5 @@ h1, .footer {
 }
 
 .icon-white {
-  background-image: url(<%=asset_path "letter_opener_web/glyphicons-halflings-white.png"%>);
+  background-image: image-url(<%=asset_path "letter_opener_web/glyphicons-halflings-white.png"%>);
 }
