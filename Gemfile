@@ -27,12 +27,20 @@ gem 'dotenv-rails'
 gem 'kaminari'
 gem 'fog-aws'
 gem 'dotenv-rails'
+gem 'dotenv-rails'
+gem 'unicorn'
+gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
 gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
     gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
     gem 'letter_opener_web'
+    gem 'capistrano', '3.6.0' # capistranoのツール一式
+    gem 'capistrano-bundler'
+    gem 'capistrano-rails'
+    gem 'capistrano-rbenv'
+    gem 'capistrano3-unicorn'
 end
 
 group :development do
