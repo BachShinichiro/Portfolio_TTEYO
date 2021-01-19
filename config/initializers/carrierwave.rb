@@ -15,7 +15,7 @@ CarrierWave.configure do |config|
   config.fog_attributes = {'Cache-Control' => 'public, max-age=86400'}
   case Rails.env
     when 'production'
-      config.fog_directory = 'tteyo-production	'
+      config.fog_directory = 'tteyo-development'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tteyo-production	'
     when 'development'
       config.fog_directory = 'tteyo-development'
