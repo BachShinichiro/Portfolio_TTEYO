@@ -388,7 +388,7 @@ needs to be compiled along with the css file.
 ``` css
 /*= link "logo.png" */
 .logo {
-  background-image: url(logo.png)
+  background-image: image-url(logo.png)
 }
 ```
 
