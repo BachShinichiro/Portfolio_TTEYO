@@ -26,7 +26,6 @@ gem 'rails-i18n'
 gem 'kaminari'
 gem 'fog-aws'
 gem 'dotenv-rails'
-gem 'unicorn'
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
 gem 'bootsnap', '>= 1.1.0', require: false
