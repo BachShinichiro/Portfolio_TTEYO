@@ -7,7 +7,7 @@
   position: relative;/*←相対位置*/
   padding-bottom: 120px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-  background-image: image-url("/images/bg10.JPG");
+  background-image: image-url("bg10.JPG");
   width: 100%;
 }
 
@@ -41,12 +41,12 @@ body {
 
 .heading {
   width: 100%;
-  background-image: image-url("/images/bg9.JPG");
+  background-image: image-url("bg9.JPG");
   padding-bottom: 5em;
 
 }
 header {
-  background-image: image-url("/images/bg3.JPG");
+  background-image: image-url("bg3.JPG");
 }
 
 header a {
@@ -59,7 +59,7 @@ header a:hover {
 }
 
 footer {
-  background-image: image-url("/images/bg3.JPG");
+  background-image: image-url("bg3.JPG");
 }
 
 h1 {
