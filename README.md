@@ -62,11 +62,3 @@ https://docs.google.com/spreadsheets/d/1D4fZuvnU0kHW06haCUSL5URcz_IUb8-QsOlkY_mS
 * kaminari
 * bootstrap
 * faker
-* ransack
-
-## 要件
-1.就業Termから少なくとも2つ
-* コメント,devise
-
-2.就業Termから少なくとも2つ
-* ransack
