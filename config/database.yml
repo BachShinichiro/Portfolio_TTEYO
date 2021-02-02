@@ -83,6 +83,3 @@ production:
   database: tteyo_production
   username: tteyo
   password: <%= ENV['tteyo_DATABASE_PASSWORD'] %>
-
-
-高卒職歴なしの元俳優がプログラミングスクールに通ってプログラマーになれるか検証してみた
