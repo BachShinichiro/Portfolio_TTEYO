@@ -25,6 +25,7 @@ gem 'launchy'
 gem 'rails-i18n'
 gem 'kaminari'
 gem 'fog-aws'
+gem 'unicorn'
 gem 'dotenv-rails'
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
