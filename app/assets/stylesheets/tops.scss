@@ -11,6 +11,19 @@
   width: 100%;
 }
 
+.heading {
+  width: 100%;
+  background-image: image-url("bg9.png");
+  padding-bottom: 5em;
+
+}
+header {
+  background-image: image-url("bg3.png");
+}
+footer {
+  background-image: image-url("bg3.png");
+}
+
 .btn {
   border: none;
   width: 100%;
@@ -39,15 +52,6 @@ body {
   min-height: 100vh;
 }
 
-.heading {
-  width: 100%;
-  background-image: image-url("bg9.png");
-  padding-bottom: 5em;
-
-}
-header {
-  background-image: image-url("bg3.png");
-}
 
 header a {
   font-weight: bold;
@@ -56,10 +60,6 @@ header a {
 header a:hover {
   background-color: #DDDDDD	;
   
-}
-
-footer {
-  background-image: image-url("bg3.png");
 }
 
 h1 {
