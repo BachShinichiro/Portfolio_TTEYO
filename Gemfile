@@ -5,7 +5,7 @@ ruby '2.6.5'
 
 gem 'rails', '~> 5.2.4'
 gem 'pg', '>= 0.18', '< 2.0'
-# gem 'puma', '~> 3.11'
+gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.2'
@@ -25,7 +25,7 @@ gem 'launchy'
 gem 'rails-i18n'
 gem 'kaminari'
 gem 'fog-aws'
-gem 'unicorn'
+# gem 'unicorn'
 gem 'dotenv-rails'
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
