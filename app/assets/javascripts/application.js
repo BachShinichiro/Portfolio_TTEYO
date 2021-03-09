@@ -14,13 +14,12 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery/dist/jquery.js
-//= require bootstrap/dist/js/bootstrap.min
 
 //= require_tree .
 
 
 
-$(function(){
+ document.addEventListener("turbolinks:load", function(){
   function buildField(index) {  // 追加するフォームのｈｔｍｌを用意
     const html = `<div class="js-file-group" data-index="${index}">
                     <div class="tag-area__title">
@@ -37,7 +36,7 @@ $(function(){
     return html;
   }
 
-  let fileIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] // 追加するフォームのインデックス番号を用意
+  let fileIndex = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 , 13 , 14, 15, 16, 17, 18, 19, 20] // 追加するフォームのインデックス番号を用意
   var lastIndex = $(".js-file-group:last").data("index"); // 編集フォーム用（すでにデータがある分のインデックス番号が何か取得しておく）
   fileIndex.splice(0, lastIndex); // 編集フォーム用（データがある分のインデックスをfileIndexから除いておく）
   let fileCount = $(".hidden-destroy").length; // 編集フォーム用（データがある分のフォームの数を取得する）
@@ -79,5 +78,11 @@ $(function(){
     }
   })
 })
+
+function altRan2() {
+	var r = Math.floor(Math.random() * 6) +1; //乱数の発生
+
+  document.getElementById("sai").innerHTML = r; //値の出力
+}
 
 
