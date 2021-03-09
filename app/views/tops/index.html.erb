@@ -3,10 +3,6 @@
    <div class="text_area">
      <h4>「ってよ」は、<br>
       小劇場とお客様を結ぶチケット予約サイトです。</h4>
-    <form>
-      <input type="button" value="サイコロ" onClick="altRan2()">
-      <span id="sai">-</span>
-    </form> 
     <% if user_signed_in? %>
       <h3><%=link_to "一覧へ", events_path ,id:"topimage" %></h3>
     <% else %>
