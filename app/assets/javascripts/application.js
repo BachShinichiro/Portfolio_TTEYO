@@ -20,7 +20,7 @@
 
 
 
- document.addEventListener("turbolinks:load", function(){
+  (function(){
   function buildField(index) {  // 追加するフォームのｈｔｍｌを用意
     const html = `<div class="js-file-group" data-index="${index}">
                     <div class="tag-area__title">
