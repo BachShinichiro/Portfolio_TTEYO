@@ -13,14 +13,15 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require bootstrap/dist/js/bootstrap.min
 //= require jquery/dist/jquery.js
+//= require bootstrap/dist/js/bootstrap.min
+
 
 //= require_tree .
 
 
 
-  (function(){
+document.addEventListener("turbolinks:load",function(){
   function buildField(index) {  // 追加するフォームのｈｔｍｌを用意
     const html = `<div class="js-file-group" data-index="${index}">
                     <div class="tag-area__title">
