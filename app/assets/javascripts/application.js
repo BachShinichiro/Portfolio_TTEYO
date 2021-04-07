@@ -14,6 +14,7 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery/dist/jquery.js
+//= require jquery-migrate-min
 //= require bootstrap/dist/js/bootstrap.min
 
 

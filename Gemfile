@@ -27,6 +27,7 @@ gem 'kaminari'
 gem 'fog-aws'
 gem 'unicorn'
 gem 'dotenv-rails'
+gem 'jquery-migrate-rails'
 gem 'mini_racer', platforms: :ruby # デプロイ時に必要
 
 gem 'bootsnap', '>= 1.1.0', require: false
