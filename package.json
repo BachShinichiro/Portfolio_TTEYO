@@ -2,7 +2,7 @@
   "name": "TTEYO",
   "private": true,
   "dependencies": {
-    "bootstrap": "4",
-    "jquery": "^3.5.1"
+    "bootstrap": "3",
+    "jquery": "^3.6.0"
   }
 }
