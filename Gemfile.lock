@@ -155,6 +155,7 @@ GEM
     ipaddress (0.8.3)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
+    jquery-migrate-rails (1.2.1)
     kaminari (1.2.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.2.1)
@@ -364,6 +365,7 @@ DEPENDENCIES
   faker
   fog-aws
   jbuilder (~> 2.5)
+  jquery-migrate-rails
   kaminari
   launchy
   letter_opener_web
