@@ -9,14 +9,16 @@
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
   background-image: image-url("bg10.png");
   width: 100%;
+  max-width: 960px;
+  align-items: center;
 }
 
 .heading {
   width: 100%;
   background-image: image-url("bg9.png");
   padding-bottom: 5em;
-
 }
+
 header {
   background-image: image-url("bg3.png");
 }
@@ -50,17 +52,23 @@ body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  max-width: 960px;
+  text-align: center;
 }
 
+.navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
+  color: #DDDDDD;
+}
+
+.navbar-light .navbar-brand {
+  color: #DDDDDD;
+}
 
 header a {
   font-weight: bold;
 }
 
 header a:hover {
-  background-color: #DDDDDD	;
-  
+  color: #000;
 }
 
 h1 {
@@ -69,13 +77,13 @@ h1 {
 }
 
 
+
 h3 {
-  font-family: 'Anton', sans-serif;
   text-align: center;
   margin-bottom: 240px;
   font-size: 50px;
   margin-bottom: 0;
-  color: #FFFAFA	;
+  font-family: 'Dela Gothic One', cursive;
 }
 
 h3 a:hover {
@@ -84,13 +92,12 @@ h3 a:hover {
 
 h4 {
   text-align: center;
-  padding: 7em;
-  font-family: 'Noto Serif JP', serif;
-  color: gold;
   font-weight: bold;
+  font-family: 'Dela Gothic One', cursive;
 }
 div .btn h3 {
   text-align: center;
+  font-family: 'Dela Gothic One', cursive;
 }
 
 .logo {
@@ -99,17 +106,13 @@ div .btn h3 {
   position: relative;
 }
 
-h3 a {
-  color: azure;
-}
 
 h3 a:hover {
   text-decoration: none;
 }
 
 .topimage {
-  text-align: center;
-  // display: inline-block;
+  padding: auto;
 }
 
 
@@ -123,13 +126,22 @@ h3 a:hover {
 }
 
 // .topimage:hover {
-//   background-color: #DDDDDD;
-// }
+  //   background-color: #DDDDDD;
+  // }
+  
+  img:hover {
+    background-color: #DDDDDD;
+  }
+  
 
-#topimage {
-  height: 200px;
-}
+  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+    font-family: 'Dela Gothic One', cursive;
+  }
 
-img:hover {
-  background-color: #DDDDDD;
-}
+  iframe {
+    padding: 4rem;
+  }
+
+  .btn a {
+    margin: 0 auto;
+  }
