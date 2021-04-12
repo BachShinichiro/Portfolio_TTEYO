@@ -2,8 +2,8 @@ CarrierWave.configure do |config|
   require 'carrierwave/storage/abstract'
   require 'carrierwave/storage/file'
   require 'carrierwave/storage/fog'
-  if Rails.env.development?
-    config.storage :file
+  if Rails.env.production?
+    config.storage :fog
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
         provider:              'AWS',
@@ -12,7 +12,7 @@ CarrierWave.configure do |config|
         region:                'ap-northeast-1',
         path_style:            true,
     }
-    config.fog_public     = false
+    config.fog_public     = true
     config.fog_attributes = {'Cache-Control' => 'public, max-age=86400'}
     config.fog_directory = 'tteyo-production'
     config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/tteyo-production	'
