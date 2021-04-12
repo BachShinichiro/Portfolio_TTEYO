@@ -5,7 +5,7 @@
   text-align: center;
   min-height: 100vh;
   position: relative;/*←相対位置*/
-  padding-bottom: 120px;/*←footerの高さ*/
+  padding-bottom: 60px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
   background-image: image-url("bg10.png");
   width: 100%;
@@ -39,9 +39,7 @@ footer {
   margin: auto;
   padding-bottom: 10px;
   font-size: 12px;
-  position: absolute;
   bottom: 0;
-  flex: 1;
 }
 
 footer p {
@@ -76,8 +74,6 @@ h1 {
   font-size: 50px;
 }
 
-
-
 h3 {
   text-align: center;
   margin-bottom: 240px;
@@ -95,6 +91,7 @@ h4 {
   font-weight: bold;
   font-family: 'Dela Gothic One', cursive;
 }
+
 div .btn h3 {
   text-align: center;
   font-family: 'Dela Gothic One', cursive;
@@ -106,7 +103,6 @@ div .btn h3 {
   position: relative;
 }
 
-
 h3 a:hover {
   text-decoration: none;
 }
@@ -114,8 +110,6 @@ h3 a:hover {
 .topimage {
   padding: auto;
 }
-
-
 
 .txt_ellipsis{
   overflow: hidden;
@@ -125,14 +119,14 @@ h3 a:hover {
   -o-text-overflow: ellipsis;
 }
 
-  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
-    font-family: 'Dela Gothic One', cursive;
-  }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+  font-family: 'Dela Gothic One', cursive;
+}
 
-  iframe {
-    padding: 4rem;
-  }
+iframe {
+  padding: 4rem;
+}
 
-  .btn a {
-    margin: 0 auto;
-  }
+.btn a {
+  margin: 0 auto;
+}
