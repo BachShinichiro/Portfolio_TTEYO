@@ -43,14 +43,14 @@
     <% end %>
     <div class="topimage col-12">
     <% if user_signed_in? %>
-      <%=link_to image_tag("topHira.png"), events_path ,id:"topimage" %>
+      <%=link_to image_tag("logo.png"), events_path ,id:"topimage" %>
     <% else %>
       <%=link_to image_tag("top.png"), events_path ,id:"topimage" %>
     <% end %>
     </div>
     <%= yield %>
     <footer class="fixed-bottom">
-      <p>© 2020 TTEYO</p>
+      <p>Copyright ©　2020 TtEYo All Rights Reserved.</p>
     </footer>
   </body>
 

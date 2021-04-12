@@ -1,25 +1,13 @@
 <body>
-  <div class="wrapper">
+  <div class="wrapper, text-center">
    <div class="text_area">
-     <h4>「ってよ」は、<br>
-      小劇場とお客様を結ぶチケット予約サイトです。</h4>
+      <iframe width="600" height="380" src="https://www.youtube.com/embed/yiWPfBYh9uI?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+     <h4><br>
+      おすすめの曲どうぞ</h4>
+
     <% if user_signed_in? %>
       <h3><%=link_to "一覧へ", events_path ,id:"topimage" %></h3>
     <% else %>
-      <div class="btn btn-outline-dark">
-        <h3>TTEYO MENU</h3>
-        <h3><新規登録></h3>
-        <div class="btn btn-outline-secondary">
-        <h3><%= link_to 'SIGN UP', new_user_registration_path %></h3>
-        </div>
-        <h3><ログイン></h3>
-        <div class="btn btn-outline-secondary">
-        <h3><%= link_to 'LOG IN', new_user_session_path %></h3>
-        </div>
-        <h3><とりあえず見る></h3>
-        <div class="btn btn-outline-secondary">
-        <h3><%= link_to 'See without logging in', events_path %></h3>
-      </div>
     <%end%>
    </div>
     </div>
