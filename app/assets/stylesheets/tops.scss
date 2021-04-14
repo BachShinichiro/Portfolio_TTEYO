@@ -5,7 +5,7 @@
   text-align: center;
   min-height: 100vh;
   position: relative;/*←相対位置*/
-  padding-bottom: 120px;/*←footerの高さ*/
+  padding-bottom: 60px;/*←footerの高さ*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
   background-image: image-url("bg10.png");
   width: 100%;
@@ -37,11 +37,8 @@ footer {
   padding: 20px 0 10px 0;
   color: #c8c9cc;
   margin: auto;
-  padding-bottom: 10px;
   font-size: 12px;
-  position: absolute;
   bottom: 0;
-  flex: 1;
 }
 
 footer p {
@@ -74,9 +71,9 @@ header a:hover {
 h1 {
   text-align: center;
   font-size: 50px;
+  width: 100%;
+  word-wrap: break-word;
 }
-
-
 
 h3 {
   text-align: center;
@@ -95,6 +92,7 @@ h4 {
   font-weight: bold;
   font-family: 'Dela Gothic One', cursive;
 }
+
 div .btn h3 {
   text-align: center;
   font-family: 'Dela Gothic One', cursive;
@@ -106,16 +104,14 @@ div .btn h3 {
   position: relative;
 }
 
-
 h3 a:hover {
   text-decoration: none;
 }
 
-.topimage {
-  padding: auto;
+.topimage img {
+  width: 100%;
+  max-width: 480px;
 }
-
-
 
 .txt_ellipsis{
   overflow: hidden;
@@ -125,14 +121,29 @@ h3 a:hover {
   -o-text-overflow: ellipsis;
 }
 
-  body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
-    font-family: 'Dela Gothic One', cursive;
-  }
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+  font-family: 'Dela Gothic One', cursive;
+  word-wrap: break-word;
+}
 
-  iframe {
-    padding: 4rem;
-  }
+iframe {
+  padding: 4rem;
+  max-width: 600px;
+  width: 100%;
+}
 
-  .btn a {
-    margin: 0 auto;
+.btn a {
+  margin: 0 auto;
+}
+/* RESPONSIVE 設定
+------------------------------------------------------------*/
+@media only screen and (min-width: 800px){
+  .table-responsive-phone {
+    display: none;
   }
+}
+@media only screen and (max-width: 801px){
+  .table-responsive {
+    display: none;
+  }
+}

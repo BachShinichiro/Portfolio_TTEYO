@@ -6,10 +6,10 @@
     <thead>
       <tr class="row" >
         <th class='col-1'>ID</th>
-        <th class='col-1'>予約者の名前</th>
+        <th class='col-2'>予約者の名前</th>
         <th class='col-2'>日にち</th>
-        <th class='col-1'>枚数</th>
-        <th class='col-1'>備考欄</th>
+        <th class='col-2'>枚数</th>
+        <th class='col-2'>備考欄</th>
         <th colspan="3"></th>
       </tr>
     </thead>
@@ -18,17 +18,38 @@
       <% @reservations.each do |r| %>
         <tr class="row" >
           <td class='col-1'><%= r.id%></td>
-          <td class='col-1'><%= r.user.name%></td>
+          <td class='col-2'><%= r.user.name%></td>
           <td class='col-2'><%= r.date.strftime("%Y年%m月%d日 %H:%M")%>~</td>
-          <td class='col-1'><%= r.number_of_ticket%></td>
-          <td class="col-1"><%= r.remarks %></td>
-          <td ><%= link_to '詳細', event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-primary" %></td>
-          <td ><%= link_to '編集', edit_event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-warning" %></td>
-          <td ><%= link_to '削除', event_reservation_path(event_id: r.event_id, id: r.id), method: :delete, data: { confirm: t('view.tasks.index.Are you sure?') } ,class: "btn btn-outline-danger" %></td>
+          <td class='col-2'><%= r.number_of_ticket%></td>
+          <td class="col-2"><%= r.remarks %></td>
+          <td class="col-1"><%= link_to '詳細', event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-primary" %></td>
+          <td class="col-1"><%= link_to '編集', edit_event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-warning" %></td>
+          <td class="col-1"><%= link_to '削除', event_reservation_path(event_id: r.event_id, id: r.id), method: :delete, data: { confirm: t('view.tasks.index.Are you sure?') } ,class: "btn btn-outline-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-responsive-phone">
+  <table class="table table-striped">
+    <thead>
+      <tr class="row" >
+        <th class='col-12'>予約者の名前</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @reservations.each do |r| %>
+        <tr class="row" >
+          <td class="col-9"><%= link_to r.user.name, event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-primary" %></td>
+          <td class="col-1"><%= link_to '詳細', event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-primary" %></td>
+          <td class="col-1"><%= link_to '編集', edit_event_reservation_path(event_id: r.event_id, id: r.id) ,class: "btn btn-outline-warning" %></td>
+          <td class="col-1"><%= link_to '削除', event_reservation_path(event_id: r.event_id, id: r.id), method: :delete, data: { confirm: t('view.tasks.index.Are you sure?') } ,class: "btn btn-outline-danger" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
   <br>
-  <%= link_to 'New Reservation', new_event_reservation_path %>
+  <%= link_to '予約追加する', new_event_reservation_path %>

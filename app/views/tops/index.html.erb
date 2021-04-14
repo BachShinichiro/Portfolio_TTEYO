@@ -1,15 +1,14 @@
 <body>
   <div class="wrapper, text-center">
    <div class="text_area">
-      <iframe width="600" height="380" src="https://www.youtube.com/embed/yiWPfBYh9uI?autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="600" height="380" src="https://www.youtube.com/embed/yiWPfBYh9uI?loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
      <h4><br>
       おすすめの曲どうぞ</h4>
 
     <% if user_signed_in? %>
       <h3><%=link_to "一覧へ", events_path ,id:"topimage" %></h3>
     <% else %>
+      <h3><%=link_to "一蘭へ", events_path ,id:"topimage" %></h3>
     <%end%>
-   </div>
-    </div>
   <div>
 </body>

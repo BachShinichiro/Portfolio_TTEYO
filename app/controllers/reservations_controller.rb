@@ -14,7 +14,9 @@ class ReservationsController < ApplicationController
 
   def show;end
 
-  def edit;end
+  def edit
+    @select_dates = @event.select_dates
+  end
 
   def create
     @reservation = current_user.reservations.build(reservation_params)
