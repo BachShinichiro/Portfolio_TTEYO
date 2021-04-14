@@ -37,7 +37,6 @@ footer {
   padding: 20px 0 10px 0;
   color: #c8c9cc;
   margin: auto;
-  padding-bottom: 10px;
   font-size: 12px;
   bottom: 0;
 }
@@ -72,6 +71,8 @@ header a:hover {
 h1 {
   text-align: center;
   font-size: 50px;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 h3 {
@@ -107,8 +108,9 @@ h3 a:hover {
   text-decoration: none;
 }
 
-.topimage {
-  padding: auto;
+.topimage img {
+  width: 100%;
+  max-width: 480px;
 }
 
 .txt_ellipsis{
@@ -121,12 +123,20 @@ h3 a:hover {
 
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
   font-family: 'Dela Gothic One', cursive;
+  word-wrap: break-word;
 }
 
 iframe {
   padding: 4rem;
+  max-width: 600px;
+  width: 100%;
 }
 
 .btn a {
   margin: 0 auto;
+}
+/* RESPONSIVE 設定
+------------------------------------------------------------*/
+@media only screen and (min-width: 1200px){
+  
 }
