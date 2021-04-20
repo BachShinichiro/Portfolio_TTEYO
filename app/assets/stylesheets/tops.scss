@@ -36,7 +36,6 @@ footer {
   background-color:#e8e9eb;
   padding: 20px 0 10px 0;
   color: #c8c9cc;
-  margin: auto;
   font-size: 12px;
   bottom: 0;
 }
@@ -112,6 +111,12 @@ h3 a:hover {
   width: 100%;
   max-width: 480px;
 }
+#topimage img {
+  width: 100%;
+  max-width: 620px;
+}
+
+
 
 .txt_ellipsis{
   overflow: hidden;

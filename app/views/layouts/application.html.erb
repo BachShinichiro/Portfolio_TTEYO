@@ -4,10 +4,10 @@
     <title>TTEYO</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag('favicon.ico') %>
+
     <meta name="viewport" content="width=device-width">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&  display=swap" rel="stylesheet">
@@ -45,7 +45,7 @@
     <% end %>
     <div class="topimage col-12">
     <% if user_signed_in? %>
-      <%=link_to image_tag("logo.png"), events_path ,id:"topimage" %>
+      <%=link_to image_tag("logo.png"), events_path %>
     <% else %>
       <%=link_to image_tag("top.png"), events_path ,id:"topimage" %>
     <% end %>
