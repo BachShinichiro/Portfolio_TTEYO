@@ -1,14 +1,29 @@
 <body>
   <div class="wrapper, text-center">
+
    <div class="text_area">
       <iframe width="600" height="380" src="https://www.youtube.com/embed/yiWPfBYh9uI?loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-     <h4><br>
-      おすすめの曲どうぞ</h4>
 
     <% if user_signed_in? %>
-      <h3><%=link_to "一覧へ", events_path ,id:"topimage" %></h3>
+      <h3><%=link_to "公演を探す", events_path ,id:"topimage" %></h3>
     <% else %>
-      <h3><%=link_to "一覧へ", events_path ,id:"topimage" %></h3>
+      <h3><%=link_to "公演を探す", events_path ,id:"topimage" %></h3>
+    <h3><%= link_to "新規登録", new_user_registration_path ,class:"" %></h3>
+    <h3><%= link_to "ログイン", new_user_session_path ,class:"" %></h3>
     <%end%>
+    <br>
+
+    <h3>~ってよの使い方~</h3><br>
+    <p>⭐︎主催者は、マイページからイベントを立ち上げることができます。<br>投稿したイベントはマイページに表示され予約したお客様を一覧で見ることができます。 </p>
+    <p>⭐︎お客様はイベントに対して予約することができ、 <br>予約が完了すると新規登録時に登録したメールアドレスに完了メールが飛びます。 <br>(予約したときの完了メールは主催者にも飛びます) お客様のマイページから予約したイベントを確認することができます。 <br>ログインしたユーザーはイベントの詳細ページにて質問をコメントすることができます。</p>
+    <div class=exampleImage><%= image_tag 'ForOrganizers.png' %></div>
+    <div class=exampleImage><%= image_tag 'HowCreateEvent.png' %></div>
+    <div class=exampleImage><%= image_tag 'HowConfirmReservation.png' %></div>
+    <br><br>
+
+
+
+
+
   <div>
 </body>

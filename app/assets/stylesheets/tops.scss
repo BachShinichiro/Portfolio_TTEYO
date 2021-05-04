@@ -115,7 +115,11 @@ h3 a:hover {
   width: 100%;
   max-width: 620px;
 }
+.wrapper .exampleImage {
+  width: 100%;
+  max-width: 870px;
 
+}
 
 
 .txt_ellipsis{
@@ -126,7 +130,7 @@ h3 a:hover {
   -o-text-overflow: ellipsis;
 }
 
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td{
+dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,blockquote,th,td{
   font-family: 'Dela Gothic One', cursive;
   word-wrap: break-word;
 }
