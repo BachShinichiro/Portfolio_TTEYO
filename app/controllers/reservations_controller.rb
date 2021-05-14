@@ -19,9 +19,12 @@ class ReservationsController < ApplicationController
   end
 
   def create
+    @select_dates = @event.select_dates
     @reservation = current_user.reservations.build(reservation_params)
     @reservation.event = @event
-    if @reservation.save
+    @today = Date.today
+
+    if @reservation.save && @today < @event.period_end
       ReservationMailer.reservation_mail(@reservation).deliver  ##追記
       redirect_to event_reservation_path(@event, @reservation), notice: '予約完了いたしました！確認メールご確認ください.'
     else
