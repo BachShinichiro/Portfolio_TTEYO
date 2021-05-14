@@ -32,3 +32,19 @@ main {
   border-radius: 0.25rem;
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
+.event-end {
+  position: absolute;
+  top:50%;
+  left:50%;
+  width: 300px;
+  opacity:70%;
+  transform: translate(-50%, -50%);
+}
+
+.display-none {
+  display: none;
+}
+
+.flyer-container {
+  position: relative;
+}
